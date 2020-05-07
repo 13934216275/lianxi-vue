@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script src="vue-router.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <!--to   路由跳转地址-->
+<router-link to="/picture">图片</router-link>
+<router-link to="/joke">笑话</router-link>
+<router-link to="/dt">动图</router-link>
+    <!--页面跳转展示的区域-->
+    <router-view></router-view>
+</div>
+</body>
+</html>
+<script>
+    const hh=new VueRouter({
+        routes:[
+            {
+            path:'/picture',
+            name:"picture",
+            meta:{
+                icon:'',
+                title:"图片"
+            },
+            component:{
+                template:"<p>图片</p>"
+            }
+        },
+            {
+                path:'/joke',
+                name:"picture",
+                meta:{
+                    icon:'',
+                    title:"笑话"
+                },
+                component:{
+                    template:"<p>笑话</p>"
+                }
+            },
+            {
+                path:'/dt',
+                name:"picture",
+                meta:{
+                    icon:'',
+                    title:"动图"
+                },
+                component:{
+                    template:"<p>动图</p>"
+                }
+            }
+        ]
+    });
+new Vue({
+    el:"#app",
+    router:hh
+})
+</script>
