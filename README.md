@@ -1,2 +1,2 @@
 # lianxi-vue
-vue路路由练习
+vue路由练习
